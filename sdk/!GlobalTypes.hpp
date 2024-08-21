@@ -7828,12 +7828,12 @@ public:
 
 // Registered binary: networksystem.dll (project 'networksystem')
 // Alignment: 8
-// Size: 0x2
+// Size: 0x4
 // Has Trivial Destructor
 struct ChangeAccessorFieldPathIndex_t
 {
 public:
-	int16_t m_Value; // 0x0	
+	int32_t m_Value; // 0x0	
 };
 
 // Registered binary: vphysics2.dll (project 'physicslib')
@@ -18895,9 +18895,7 @@ private:
 public:
 	TakeDamageFlags_t m_nDamageFlags; // 0x70	
 	int32_t m_nNumObjectsPenetrated; // 0x78	
-private:
-	[[maybe_unused]] uint8_t __pad007c[0x4]; // 0x7c
-public:
+	float m_flFriendlyFireDamageReductionRatio; // 0x7c	
 	HSCRIPT m_hScriptInstance; // 0x80	
 private:
 	[[maybe_unused]] uint8_t __pad0088[0x14]; // 0x88
@@ -23783,12 +23781,12 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0x98
+// Size: 0xa8
 class C_CommandContext
 {
 public:
 	bool needsprocessing; // 0x0	
-	int32_t command_number; // 0x90	
+	int32_t command_number; // 0xa0	
 };
 
 // Registered binary: particles.dll (project 'particles')
@@ -31231,7 +31229,7 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0xb8
+// Size: 0xd8
 class CDecalInfo
 {
 public:
@@ -31253,9 +31251,9 @@ public:
 	CDecalInfo* m_pNext; // 0x40	
 	CDecalInfo* m_pPrev; // 0x48	
 private:
-	[[maybe_unused]] uint8_t __pad0050[0x60]; // 0x50
+	[[maybe_unused]] uint8_t __pad0050[0x80]; // 0x50
 public:
-	int32_t m_nDecalMaterialIndex; // 0xb0	
+	int32_t m_nDecalMaterialIndex; // 0xd0	
 	
 	// Datamap fields:
 	// void m_decalEvent; // 0x50
